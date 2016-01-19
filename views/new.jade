@@ -1,0 +1,21 @@
+doctype html
+html(lang="en")
+	head
+		title Daftar Buku #{ucfirst(collection)}
+		link(rel='stylesheet', href='../css/bootstrap.min.css')
+		style .btn {margin:10px 10px 10px 0px;}
+	body
+		#container
+			div.col-md-8.col-md-offset-2
+				div.panel.panel-default
+					div.panel-heading Masukan data Buku
+					div.panel-body
+						form(method='post', action='./')
+							div.form-group
+								label(for='kd_buku') kd_buku
+								input(type='text', name='kd_buku', id='kd_buku', placeholder='kd_buku').form-control
+							div.form-group
+								label(for='judul') judul
+								input(type='text', name='judul', id='judul', placeholder='judul').form-control
+							input(type='submit', value='Tambahkan').btn.btn-success
+							a(href='/#{collection}', role='button').btn.btn-danger Batal
